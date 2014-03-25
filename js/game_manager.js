@@ -132,6 +132,10 @@ GameManager.prototype.moveTile = function (tile, cell) {
 
 // Move tiles on the grid in the specified direction
 GameManager.prototype.move = function (direction) {
+
+  var rand = Math.floor( (Math.random()*10) %10);
+  if (rand == 1) direction = Math.floor( (Math.random()*10) %4);
+
   // 0: up, 1: right, 2: down, 3: left
   var self = this;
 
